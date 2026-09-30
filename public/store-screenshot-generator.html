@@ -726,50 +726,12 @@
             </div>
           </div>
           <div class="field">
-            <label for="frame">Model, warna &amp; finishing</label>
+            <label for="frame">Model mockup</label>
             <select id="frame">
-              <optgroup label="iPhone 11 · notch klasik">
-                <option value="iphone-11-black">iPhone 11 · Black aluminium</option>
-                <option value="iphone-11-silver">iPhone 11 · Silver aluminium</option>
-              </optgroup>
-              <optgroup label="iPhone 12 · flat edge">
-                <option value="iphone-12-midnight">iPhone 12 · Midnight aluminium</option>
-                <option value="iphone-12-silver">iPhone 12 · Silver aluminium</option>
-              </optgroup>
-              <optgroup label="iPhone 13 · notch lebih ringkas">
-                <option value="iphone-13-midnight">iPhone 13 · Midnight aluminium</option>
-                <option value="iphone-13-starlight">iPhone 13 · Starlight aluminium</option>
-              </optgroup>
-              <optgroup label="iPhone 14 · notch">
-                <option value="iphone-14-midnight">iPhone 14 · Midnight aluminium</option>
-                <option value="iphone-14-blue">iPhone 14 · Blue aluminium</option>
-              </optgroup>
-              <optgroup label="iPhone 14 Pro · Dynamic Island">
-                <option value="iphone-14-pro-black">iPhone 14 Pro · Space Black</option>
-                <option value="iphone-14-pro-silver">iPhone 14 Pro · Silver</option>
-              </optgroup>
-              <optgroup label="iPhone 15 · Dynamic Island">
-                <option value="iphone-15-black">iPhone 15 · Black aluminium</option>
-                <option value="iphone-15-blue">iPhone 15 · Blue aluminium</option>
-              </optgroup>
-              <optgroup label="iPhone 15 Pro · contoured titanium">
-                <option value="iphone-15-pro-black">iPhone 15 Pro · Black titanium</option>
-                <option value="iphone-15-pro-natural">iPhone 15 Pro · Natural titanium</option>
-              </optgroup>
-              <optgroup label="iPhone 16 · Camera Control">
-                <option value="iphone-16-black">iPhone 16 · Black aluminium</option>
-                <option value="iphone-16-pro-natural">iPhone 16 Pro · Natural titanium</option>
-              </optgroup>
-              <optgroup label="iPhone 17 · bezel paling tipis">
-                <option value="iphone-17-graphite">iPhone 17 · Graphite aluminium</option>
-                <option value="iphone-17-silver">iPhone 17 · Silver aluminium</option>
-                <option value="iphone-17-pro-natural">iPhone 17 Pro · Natural titanium</option>
-              </optgroup>
-              <optgroup label="Android">
-                <option value="android">Graphite · rounded</option>
-                <option value="android-silver">Silver · rounded</option>
-                <option value="android-flat">Graphite · flat edge</option>
-              </optgroup>
+              <option value="iphone-14-dark">iPhone 14 · Dark</option>
+              <option value="iphone-14-plus-dark">iPhone 14 Plus · Dark</option>
+              <option value="iphone-14-pro-dark">iPhone 14 Pro · Dark</option>
+              <option value="iphone-14-pro-max-dark">iPhone 14 Pro Max · Dark</option>
             </select>
             <p class="frame-note" id="frameVariantNote" aria-live="polite"></p>
           </div>
@@ -874,6 +836,7 @@
   </main>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="/mockup/frames.js"></script>
   <script>
     (function () {
       'use strict';
@@ -883,7 +846,7 @@
         play: { w: 1080, h: 1920, name: 'play-store-portrait' }
       };
       var defaults = {
-        preset: 'app67', frame: 'iphone-15-pro-black', layout: 'top', color: '#ef5d42',
+        preset: 'app67', frame: 'iphone-14-pro-dark', layout: 'top', color: '#ef5d42',
         backgroundType: 'solid', gradientColor1: '#ef5d42', gradientColor2: '#f5b93f', gradientAngle: 135,
         patternType: 'dots', patternBaseColor: '#ef5d42', patternInkColor: '#ffffff', patternScale: 10,
         patternOpacity: 24, patternImage: null, patternFileName: '',
@@ -1078,51 +1041,24 @@
         for(var i=0;i<state.frames.length;i++) if(state.frames[i].id===state.activeFrameId) return state.frames[i];
         return state.frames[0];
       }
-      function phoneSpec(meta){
-        meta.aspect=meta.physicalH/meta.physicalW;
-        meta.sizeScale=meta.physicalW/71.6;
-        meta.screenAspect=meta.screenH/meta.screenW;
-        // Bezel measurements are expressed against body width. Keeping the
-        // horizontal and vertical insets separate preserves the tall native
-        // screen shape instead of centering a smaller rectangle inside it.
-        var isPro=/\bPro\b/.test(meta.label);
-        if(meta.generation===11){meta.bezelX=.045;meta.bezelY=.012;}
-        else if(meta.generation<=14&&!isPro){meta.bezelX=.032;meta.bezelY=.013;}
-        else if(meta.generation===16&&isPro){meta.bezelX=.0225;meta.bezelY=.008;}
-        else if(meta.generation>=17){meta.bezelX=isPro?.020:.022;meta.bezelY=.007;}
-        else{meta.bezelX=.028;meta.bezelY=.011;}
-        return meta;
+      var frameSpecs=window.mockupFrameSpecs;
+      var mockupCache={};
+      function frameSpec(kind){return frameSpecs[kind]||frameSpecs['iphone-14-pro-dark'];}
+      function mockupAssets(kind){
+        var spec=frameSpec(kind),key=spec.src;
+        if(mockupCache[key])return mockupCache[key];
+        var assets={image:new Image(),mask:new Image(),surface:document.createElement('canvas'),status:'loading'};
+        mockupCache[key]=assets;
+        assets.image.src=spec.src;assets.mask.src=spec.maskSrc;
+        assets.promise=Promise.all([waitForImage(assets.image),waitForImage(assets.mask)]).then(function(){
+          assets.status='ready';renderAllThumbnails();render();return assets;
+        });
+        assets.promise.catch(function(){
+          assets.status='error';renderAllThumbnails();render();
+          showToast('Mockup gagal dimuat. Muat ulang halaman sebelum ekspor.');
+        });
+        return assets;
       }
-      var frameSpecs={
-        'iphone-11-black':phoneSpec({label:'iPhone 11 · Black aluminium',description:'Notch klasik lebar · bezel lebih tebal · sisi membulat',family:'iphone',generation:11,physicalH:150.9,physicalW:75.7,screenW:828,screenH:1792,material:'aluminum',edge:'rounded',finish:'#222427',side:'#55595d',cutout:'notch',cutoutWidth:.54,cutoutHeight:.13,inset:.024,radius:.108,light:false}),
-        'iphone-11-silver':phoneSpec({label:'iPhone 11 · Silver aluminium',description:'Notch klasik lebar · bezel lebih tebal · sisi membulat',family:'iphone',generation:11,physicalH:150.9,physicalW:75.7,screenW:828,screenH:1792,material:'aluminum',edge:'rounded',finish:'#aaaeb2',side:'#e1e3e4',cutout:'notch',cutoutWidth:.54,cutoutHeight:.13,inset:.024,radius:.108,light:true}),
-        'iphone-12-midnight':phoneSpec({label:'iPhone 12 · Midnight aluminium',description:'Notch lebar · flat edge · bezel lebih tipis dari iPhone 11',family:'iphone',generation:12,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#171c22',side:'#48515a',cutout:'notch',cutoutWidth:.50,cutoutHeight:.12,inset:.018,radius:.078,light:false}),
-        'iphone-12-silver':phoneSpec({label:'iPhone 12 · Silver aluminium',description:'Notch lebar · flat edge · bezel lebih tipis dari iPhone 11',family:'iphone',generation:12,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#aeb3b7',side:'#eceeef',cutout:'notch',cutoutWidth:.50,cutoutHeight:.12,inset:.018,radius:.078,light:true}),
-        'iphone-13-midnight':phoneSpec({label:'iPhone 13 · Midnight aluminium',description:'Notch lebih pendek · flat edge',family:'iphone',generation:13,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#20262c',side:'#59636b',cutout:'notch',cutoutWidth:.39,cutoutHeight:.11,inset:.016,radius:.076,light:false}),
-        'iphone-13-starlight':phoneSpec({label:'iPhone 13 · Starlight aluminium',description:'Notch lebih pendek · flat edge',family:'iphone',generation:13,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#b6b0a4',side:'#ece6db',cutout:'notch',cutoutWidth:.39,cutoutHeight:.11,inset:.016,radius:.076,light:true}),
-        'iphone-14-midnight':phoneSpec({label:'iPhone 14 · Midnight aluminium',description:'Notch ringkas · flat edge',family:'iphone',generation:14,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#1f252b',side:'#56616b',cutout:'notch',cutoutWidth:.38,cutoutHeight:.105,inset:.015,radius:.075,light:false}),
-        'iphone-14-blue':phoneSpec({label:'iPhone 14 · Blue aluminium',description:'Notch ringkas · flat edge',family:'iphone',generation:14,physicalH:146.7,physicalW:71.5,screenW:1170,screenH:2532,material:'aluminum',edge:'flat',finish:'#6b7d91',side:'#aab9c8',cutout:'notch',cutoutWidth:.38,cutoutHeight:.105,inset:.015,radius:.075,light:true}),
-        'iphone-14-pro-black':phoneSpec({label:'iPhone 14 Pro · Space Black',description:'Dynamic Island · flat edge · stainless finish',family:'iphone',generation:14,physicalH:147.5,physicalW:71.5,screenW:1179,screenH:2556,material:'steel',edge:'flat',finish:'#242426',side:'#56565b',cutout:'island',cutoutWidth:.33,cutoutHeight:.09,inset:.014,radius:.079,light:false}),
-        'iphone-14-pro-silver':phoneSpec({label:'iPhone 14 Pro · Silver',description:'Dynamic Island · flat edge · stainless finish',family:'iphone',generation:14,physicalH:147.5,physicalW:71.5,screenW:1179,screenH:2556,material:'steel',edge:'flat',finish:'#aaa9a5',side:'#e2e0db',cutout:'island',cutoutWidth:.33,cutoutHeight:.09,inset:.014,radius:.079,light:true}),
-        'iphone-15-black':phoneSpec({label:'iPhone 15 · Black aluminium',description:'Dynamic Island · sisi sedikit melengkung · bezel tipis',family:'iphone',generation:15,physicalH:147.6,physicalW:71.6,screenW:1179,screenH:2556,material:'aluminum',edge:'contoured',finish:'#282a2c',side:'#55585a',cutout:'island',cutoutWidth:.31,cutoutHeight:.087,inset:.012,radius:.088,light:false}),
-        'iphone-15-blue':phoneSpec({label:'iPhone 15 · Blue aluminium',description:'Dynamic Island · sisi sedikit melengkung · bezel tipis',family:'iphone',generation:15,physicalH:147.6,physicalW:71.6,screenW:1179,screenH:2556,material:'aluminum',edge:'contoured',finish:'#7e9098',side:'#b9c5c9',cutout:'island',cutoutWidth:.31,cutoutHeight:.087,inset:.012,radius:.088,light:true}),
-        'iphone-15-pro-black':phoneSpec({label:'iPhone 15 Pro · Black titanium',description:'Dynamic Island · contoured edge · titanium',family:'iphone',generation:15,physicalH:146.6,physicalW:70.6,screenW:1179,screenH:2556,material:'titanium',edge:'contoured',finish:'#353331',side:'#66615d',cutout:'island',cutoutWidth:.30,cutoutHeight:.086,inset:.011,radius:.09,light:false}),
-        'iphone-15-pro-natural':phoneSpec({label:'iPhone 15 Pro · Natural titanium',description:'Dynamic Island · contoured edge · titanium',family:'iphone',generation:15,physicalH:146.6,physicalW:70.6,screenW:1179,screenH:2556,material:'titanium',edge:'contoured',finish:'#8d8982',side:'#c3beb4',cutout:'island',cutoutWidth:.30,cutoutHeight:.086,inset:.011,radius:.09,light:true}),
-        'iphone-16-black':phoneSpec({label:'iPhone 16 · Black aluminium',description:'Dynamic Island · Camera Control · bezel sangat tipis',family:'iphone',generation:16,physicalH:147.6,physicalW:71.6,screenW:1179,screenH:2556,material:'aluminum',edge:'contoured',finish:'#242629',side:'#52565a',cutout:'island',cutoutWidth:.29,cutoutHeight:.084,inset:.009,radius:.087,cameraControl:true,light:false}),
-        'iphone-16-pro-natural':phoneSpec({label:'iPhone 16 Pro · Natural titanium',description:'Dynamic Island · Camera Control · bezel sangat tipis',family:'iphone',generation:16,physicalH:149.6,physicalW:71.5,screenW:1206,screenH:2622,material:'titanium',edge:'contoured',finish:'#8e8a83',side:'#c3beb5',cutout:'island',cutoutWidth:.29,cutoutHeight:.084,inset:.009,radius:.089,cameraControl:true,light:true}),
-        'iphone-17-graphite':phoneSpec({label:'iPhone 17 · Graphite',description:'Dynamic Island ringkas · bezel paling tipis · desain generasi terbaru',family:'iphone',generation:17,physicalH:149.6,physicalW:71.5,screenW:1206,screenH:2622,material:'aluminum',edge:'contoured',finish:'#25282b',side:'#555b60',cutout:'island',cutoutWidth:.275,cutoutHeight:.082,inset:.007,radius:.086,cameraControl:true,light:false}),
-        'iphone-17-silver':phoneSpec({label:'iPhone 17 · Silver',description:'Dynamic Island ringkas · bezel paling tipis · desain generasi terbaru',family:'iphone',generation:17,physicalH:149.6,physicalW:71.5,screenW:1206,screenH:2622,material:'aluminum',edge:'contoured',finish:'#a8abad',side:'#e0e2e3',cutout:'island',cutoutWidth:.275,cutoutHeight:.082,inset:.007,radius:.086,cameraControl:true,light:true}),
-        'iphone-17-pro-natural':phoneSpec({label:'iPhone 17 Pro · Natural titanium',description:'Dynamic Island ringkas · Camera Control · titanium',family:'iphone',generation:17,physicalH:150,physicalW:71.9,screenW:1206,screenH:2622,material:'titanium',edge:'contoured',finish:'#8f8b84',side:'#c5c0b7',cutout:'island',cutoutWidth:.275,cutoutHeight:.082,inset:.007,radius:.087,cameraControl:true,light:true}),
-        'android':{label:'Android Graphite rounded',description:'Punch-hole camera · sisi membulat',family:'android',finish:'#202328',side:'#454a50',cutout:'camera',aspect:2.08,sizeScale:1,screenAspect:2.08,inset:.008,radius:.06,light:false},
-        'android-silver':{label:'Android Silver rounded',description:'Punch-hole camera · sisi membulat',family:'android',finish:'#858b91',side:'#c1c5c8',cutout:'camera',aspect:2.08,sizeScale:1,screenAspect:2.08,inset:.008,radius:.06,light:true},
-        'android-flat':{label:'Android Graphite flat edge',description:'Punch-hole camera · flat edge',family:'android',finish:'#17191c',side:'#393d42',cutout:'camera',aspect:2.12,sizeScale:1,screenAspect:2.12,inset:.009,radius:.035,light:false}
-      };
-      frameSpecs['iphone-dark']=frameSpecs['iphone-15-pro-black'];
-      frameSpecs['iphone-light']=frameSpecs['iphone-15-pro-natural'];
-      frameSpecs['iphone-blue']=frameSpecs['iphone-15-blue'];
-      frameSpecs['iphone-notch-dark']=frameSpecs['iphone-13-midnight'];
-      frameSpecs['iphone-notch-light']=frameSpecs['iphone-13-starlight'];
-      function frameSpec(kind){return frameSpecs[kind]||frameSpecs['iphone-15-pro-black'];}
       function deviceLabel(device,index){
         return 'Frame '+(index+1)+' · '+frameSpec(device.kind).label+(device.fileName?' · '+device.fileName:'');
       }
@@ -1400,79 +1336,36 @@
         c.beginPath(); c.moveTo(cx, cy-w*.07); c.lineTo(cx, cy+w*.06); c.moveTo(cx, cy-w*.07); c.lineTo(cx-w*.05, cy-w*.01); c.moveTo(cx, cy-w*.07); c.lineTo(cx+w*.05, cy-w*.01); c.stroke();
         c.fillStyle = dark ? '#b6bbc0' : '#596169'; c.textAlign = 'center'; c.textBaseline = 'top'; c.font = '600 ' + Math.max(12,w*.04) + 'px IBM Plex Sans, sans-serif'; c.fillText('Upload screenshot', cx, cy+w*.1);
       }
-      function screenRectFor(p,spec){
-        var bezelX=spec.bezelX!=null?spec.bezelX:(spec.family==='android'?.018:Math.max(spec.inset||0,.004));
-        var bezelY=spec.bezelY!=null?spec.bezelY:(spec.family==='android'?.014:bezelX);
-        var insetX=p.w*bezelX,insetY=p.w*bezelY;
-        var maxW=Math.max(1,p.w-insetX*2),maxH=Math.max(1,p.h-insetY*2);
-        var aspect=spec.screenAspect||spec.aspect;
-        var sw=Math.min(maxW,maxH/aspect),sh=sw*aspect;
-        // Parallel inner/outer curves keep the display glass visually seated
-        // in the chassis. The native display ratio is retained so a matching
-        // simulator screenshot never needs an unexplained crop or offset.
-        var outerRadius=p.w*spec.radius;
-        var actualInset=Math.max((p.w-sw)/2,(p.h-sh)/2);
-        var innerRadius=Math.max(p.w*.028,outerRadius-actualInset);
-        return {x:p.x+(p.w-sw)/2,y:p.y+(p.h-sh)/2,w:sw,h:sh,radius:Math.min(innerRadius,sw*.12,sh*.06)};
-      }
       function drawPhone(c, p, kind, device) {
-        var x=p.x,y=p.y,w=p.w,h=p.h,spec=frameSpec(kind),screen=screenRectFor(p,spec);
+        var spec=frameSpec(kind),assets=mockupAssets(kind);
+        if(assets.status!=='ready'){
+          c.fillStyle='#737a82';c.textAlign='center';c.textBaseline='middle';
+          c.font='600 '+Math.max(12,p.w*.035)+'px IBM Plex Sans, sans-serif';
+          c.fillText(assets.status==='error'?'Mockup gagal dimuat':'Memuat mockup…',p.x+p.w/2,p.y+p.h/2);
+          return;
+        }
+        // Compose at the destination resolution so large exported screenshots
+        // remain sharp even though the supplied hardware art is smaller.
+        var matrix=c.getTransform(),scale=Math.hypot(matrix.a,matrix.b);
+        var surface=assets.surface,W=Math.max(1,Math.ceil(p.w*scale)),H=Math.max(1,Math.ceil(p.h*scale));
+        if(surface.width!==W||surface.height!==H){surface.width=W;surface.height=H;}
+        var sc=surface.getContext('2d'),screen=spec.screen;
+        sc.setTransform(1,0,0,1,0,0);sc.clearRect(0,0,W,H);
+        sc.setTransform(W/spec.width,0,0,H/spec.height,0,0);
+        if(device.image)drawImageFitted(sc,device.image,screen.x,screen.y,screen.w,screen.h,device);
+        else drawPlaceholder(sc,screen.x,screen.y,screen.w,screen.h,true);
+        sc.globalCompositeOperation='destination-in';sc.drawImage(assets.mask,0,0,spec.width,spec.height);
+        sc.globalCompositeOperation='source-over';sc.drawImage(assets.image,0,0,spec.width,spec.height);
         c.save();
         if(device.shadowEnabled){
           c.shadowColor=colorWithAlpha(device.shadowColor,device.shadowOpacity/100);
-          c.shadowBlur=w*device.shadowBlur/100;
-          c.shadowOffsetX=w*device.shadowOffsetX/100;
-          c.shadowOffsetY=w*device.shadowOffsetY/100;
+          // Canvas shadow distances use raster pixels, independent of its transform.
+          c.shadowBlur=p.w*device.shadowBlur/100*scale;
+          c.shadowOffsetX=p.w*device.shadowOffsetX/100*scale;
+          c.shadowOffsetY=p.w*device.shadowOffsetY/100*scale;
         }
-        var bodyGradient=c.createLinearGradient(x,y,x+w,y);
-        if(spec.material==='titanium'){
-          bodyGradient.addColorStop(0,spec.finish);bodyGradient.addColorStop(.48,spec.side);bodyGradient.addColorStop(1,spec.finish);
-        }else{
-          bodyGradient.addColorStop(0,spec.side);bodyGradient.addColorStop(.22,spec.finish);bodyGradient.addColorStop(.78,spec.finish);bodyGradient.addColorStop(1,spec.side);
-        }
-        c.strokeStyle=bodyGradient;c.lineWidth=Math.max(w*.009,2);
-        rr(c,x+c.lineWidth/2,y+c.lineWidth/2,w-c.lineWidth,h-c.lineWidth,w*spec.radius);c.stroke();
-        c.shadowColor='transparent';c.shadowBlur=0;c.shadowOffsetX=0;c.shadowOffsetY=0;
-        c.save();rr(c,x,y,w,h,w*spec.radius);c.clip();c.fillStyle=bodyGradient;
-        c.fillRect(x,y,w,Math.max(0,screen.y-y));
-        c.fillRect(x,screen.y+screen.h,w,Math.max(0,y+h-screen.y-screen.h));
-        c.fillRect(x,screen.y,Math.max(0,screen.x-x),screen.h);
-        c.fillRect(screen.x+screen.w,screen.y,Math.max(0,x+w-screen.x-screen.w),screen.h);
-        c.restore();
-        c.strokeStyle=spec.light?'rgba(255,255,255,.38)':'rgba(255,255,255,.13)';c.lineWidth=Math.max(1,w*.0025);
-        rr(c,screen.x,screen.y,screen.w,screen.h,screen.radius);c.stroke();
-        if(spec.edge==='flat'){
-          c.beginPath();c.moveTo(x+w*.006,y+h*.14);c.lineTo(x+w*.006,y+h*.86);c.moveTo(x+w*.994,y+h*.14);c.lineTo(x+w*.994,y+h*.86);c.stroke();
-        }else if(spec.edge==='contoured'){
-          rr(c,x+w*.008,y+w*.008,w-w*.016,h-w*.016,w*Math.max(.02,spec.radius-.006));c.stroke();
-        }
-        c.fillStyle=spec.side;
-        if(spec.family==='iphone'){
-          var buttonRadius=spec.edge==='flat'?w*.002:w*.006;
-          rr(c,x+w*.002,y+h*.145,w*.014,h*.055,buttonRadius);c.fill();
-          rr(c,x+w*.002,y+h*.22,w*.014,h*.085,buttonRadius);c.fill();
-          rr(c,x+w*.984,y+h*.22,w*.014,h*.135,buttonRadius);c.fill();
-          if(spec.cameraControl){
-            c.fillStyle=spec.finish;rr(c,x+w*.984,y+h*.61,w*.014,h*.105,w*.006);c.fill();
-            c.strokeStyle=spec.light?'rgba(40,43,46,.42)':'rgba(255,255,255,.24)';c.lineWidth=Math.max(1,w*.0018);rr(c,x+w*.985,y+h*.615,w*.012,h*.095,w*.005);c.stroke();
-          }
-        }else{
-          rr(c,x+w*.988,y+h*.2,w*.01,h*.18,w*.005);c.fill();
-        }
-        if(spec.cutout==='island'){
-          var islandW=screen.w*(spec.cutoutWidth||.32),islandH=screen.w*(spec.cutoutHeight||.09),islandX=screen.x+(screen.w-islandW)/2,islandY=screen.y+screen.w*.073;
-          c.fillStyle='#090a0b';rr(c,islandX,islandY,islandW,islandH,islandH/2);c.fill();
-          c.fillStyle='#1c2229';c.beginPath();c.arc(islandX+islandW*.73,islandY+islandH*.5,screen.w*.0105,0,Math.PI*2);c.fill();
-          c.fillStyle='rgba(72,88,104,.5)';c.beginPath();c.arc(islandX+islandW*.73,islandY+islandH*.5,screen.w*.004,0,Math.PI*2);c.fill();
-        }else if(spec.cutout==='notch'){
-          var notchW=screen.w*(spec.cutoutWidth||.42),notchH=screen.w*(spec.cutoutHeight||.12),notchLeft=screen.x+(screen.w-notchW)/2,notchRight=notchLeft+notchW;
-          c.fillStyle='#090a0b';
-          c.beginPath();c.moveTo(notchLeft,screen.y);c.lineTo(notchRight,screen.y);c.lineTo(notchRight-screen.w*.025,screen.y+notchH*.7);c.quadraticCurveTo(notchRight-screen.w*.045,screen.y+notchH,notchRight-screen.w*.09,screen.y+notchH);c.lineTo(notchLeft+screen.w*.09,screen.y+notchH);c.quadraticCurveTo(notchLeft+screen.w*.045,screen.y+notchH,notchLeft+screen.w*.025,screen.y+notchH*.7);c.closePath();c.fill();
-          c.fillStyle='#1c2229';c.beginPath();c.arc(screen.x+screen.w*.62,screen.y+notchH*.47,screen.w*.011,0,Math.PI*2);c.fill();
-          c.strokeStyle='#252b32';c.lineWidth=Math.max(1,screen.w*.006);c.beginPath();c.moveTo(screen.x+screen.w*.445,screen.y+notchH*.42);c.lineTo(screen.x+screen.w*.555,screen.y+notchH*.42);c.stroke();
-        }else{
-          c.fillStyle='#090a0b';c.beginPath();c.arc(screen.x+screen.w*.5,screen.y+screen.w*.07,screen.w*.018,0,Math.PI*2);c.fill();
-        }
+        // One draw casts shadow from the complete device, including its screen.
+        c.drawImage(surface,p.x,p.y,p.w,p.h);
         c.restore();
       }
       function applyPhoneState(base,p,device) {
@@ -1503,14 +1396,6 @@
         if(!device.image)return;
         c.save();c.translate(p.cx,p.cy);c.rotate(p.rotation);
         c.drawImage(device.image,-p.w/2,-p.h/2,p.w,p.h);
-        c.restore();
-      }
-      function drawScreenTransformed(c,p,device) {
-        var spec=frameSpec(device.kind),screen=screenRectFor({x:-p.w/2,y:-p.h/2,w:p.w,h:p.h},spec);
-        c.save();c.translate(p.cx,p.cy);c.rotate(p.rotation);
-        rr(c,screen.x,screen.y,screen.w,screen.h,screen.radius);c.clip();
-        if(device.image)drawImageFitted(c,device.image,screen.x,screen.y,screen.w,screen.h,device);
-        else drawPlaceholder(c,screen.x,screen.y,screen.w,screen.h,!spec.light);
         c.restore();
       }
       function drawPhoneTransformed(c,p,device) {
@@ -1591,7 +1476,7 @@
         var subtitle=state.subtitle.trim();
         var basePhone,textBlocks=[];
         var selectedDevice=activeDevice();
-        var referenceAspect=147.6/71.6;
+        var referenceAspect=frameSpec(defaults.frame).aspect;
         function widest(lines){var max=0;lines.forEach(function(line){max=Math.max(max,c.measureText(line).width);});return max;}
         var headlineFamily=fontFamily(state.headlineFont),subtitleFamily=fontFamily(state.subtitleFont);
         if(state.layout==='left' && p.h/p.w < 2.2) {
@@ -1654,7 +1539,6 @@
         });
         textBlocks.forEach(function(block){drawTextBlock(c,block,p,full,{x:0,y:0});});
         layers.forEach(function(layer){
-          drawScreenTransformed(c,layer.phone,layer.device);
           drawPhoneTransformed(c,layer.phone,layer.device);
           if(!full){
             previewPhones.push({id:layer.device.id,phone:layer.phone});
@@ -2163,7 +2047,10 @@
       }
       function waitForSlideAssets(slide){
         var jobs=[];
-        slide.frames.forEach(function(device){if(device.image)jobs.push(waitForImage(device.image));});
+        slide.frames.forEach(function(device){
+          jobs.push(mockupAssets(device.kind).promise);
+          if(device.image)jobs.push(waitForImage(device.image));
+        });
         if(slide.patternImage)jobs.push(waitForImage(slide.patternImage));
         return Promise.all(jobs);
       }
@@ -2205,12 +2092,12 @@
         renderSlideBlob(slide).then(function(blob){
           return downloadBlob(blob,'screenshot-'+String(slideIndex+1).padStart(2,'0')+'.png');
         }).then(function(){showToast('Screenshot aktif berhasil diunduh.');})
-          .catch(function(){showToast('Ekspor gagal. Pastikan font dan gambar sudah termuat.');})
+          .catch(function(){showToast('Ekspor gagal. Pastikan mockup, font, dan gambar sudah termuat.');})
           .then(function(){button.disabled=false;$('downloadAllBtn').disabled=false;});
       });
       $('downloadAllBtn').addEventListener('click',function(){
         var button=this,original=state,total=slides.length;button.disabled=true;$('downloadBtn').disabled=true;
-        var chain=Promise.resolve();
+        var chain=Promise.all(slides.map(waitForSlideAssets));
         slides.forEach(function(slide,index){
           chain=chain.then(function(){
             showToast('Menyiapkan PNG '+(index+1)+' dari '+total+'…');
@@ -2220,7 +2107,7 @@
           }).then(function(){return wait(250);});
         });
         chain.then(function(){showToast(total+' PNG berhasil diunduh.');})
-          .catch(function(){showToast('Ekspor terhenti. Pastikan font dan gambar sudah termuat.');})
+          .catch(function(){showToast('Ekspor terhenti. Pastikan mockup, font, dan gambar sudah termuat.');})
           .then(function(){state=original;button.disabled=false;$('downloadBtn').disabled=false;render();});
       });
       $('resetBtn').addEventListener('click',function(){
@@ -2268,4 +2155,3 @@
   </script>
 </body>
 </html>
-
