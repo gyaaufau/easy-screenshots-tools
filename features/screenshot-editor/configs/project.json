@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "home",
+      "headline": {
+        "content": "Desain siap tayang",
+        "style": {
+          "preset": "shadow"
+        }
+      },
+      "background": {
+        "backgroundType": "gradient"
+      },
+      "frames": [
+        {
+          "id": "phone",
+          "imageIndex": 0,
+          "transform": {
+            "x": 32,
+            "y": 55,
+            "width": 38,
+            "scale": 1,
+            "rotation": -12
+          }
+        },
+        {
+          "id": "phone-right",
+          "imageIndex": 0,
+          "transform": {
+            "x": 68,
+            "y": 58,
+            "width": 38,
+            "scale": 0.9,
+            "rotation": 12
+          }
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "spark",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 25,
+          "color": "#f5b93f"
+        },
+        {
+          "id": "wow",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "label-wow",
+          "text": "WOW!",
+          "color": "#ff78aa",
+          "x": 80,
+          "y": 35,
+          "rotation": -12
+        }
+      ]
+    }
+  ]
+}

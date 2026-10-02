@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "kind": "commands",
+  "commands": [
+    {
+      "op": "frame.duplicate",
+      "slide": "home",
+      "frame": "phone",
+      "id": "phone-copy"
+    },
+    {
+      "op": "frame.update",
+      "slide": "home",
+      "frame": "phone-copy",
+      "value": {
+        "transform": {
+          "x": 50,
+          "y": 65,
+          "width": 30,
+          "scale": 0.8,
+          "rotation": 0
+        }
+      }
+    },
+    {
+      "op": "slide.update",
+      "slide": "home",
+      "value": {
+        "headline": {
+          "content": "Headline baru",
+          "style": {
+            "preset": "neon"
+          }
+        }
+      }
+    }
+  ]
+}

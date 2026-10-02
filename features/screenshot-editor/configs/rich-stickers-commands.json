@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "commands",
+  "commands": [
+    {
+      "op": "sticker.add",
+      "slide": "home",
+      "value": {
+        "id": "planet",
+        "kind": "sticker",
+        "source": "catalog",
+        "stickerId": "emoji-planet",
+        "x": 83,
+        "y": 53,
+        "width": 18,
+        "rotation": 15
+      }
+    },
+    {
+      "op": "sticker.duplicate",
+      "slide": "home",
+      "sticker": "yay",
+      "id": "yay-copy"
+    },
+    {
+      "op": "sticker.update",
+      "slide": "home",
+      "sticker": "yay-copy",
+      "value": {
+        "x": 20,
+        "y": 56,
+        "width": 18,
+        "rotation": -15,
+        "text": "NICE!",
+        "color": "#9bda8c"
+      }
+    }
+  ]
+}

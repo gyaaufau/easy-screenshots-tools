@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "template",
+  "preset": "play",
+  "slide": {
+    "headline": {
+      "content": "Cerita aplikasi kamu"
+    },
+    "frames": [
+      {
+        "imageIndex": "$current"
+      }
+    ],
+    "background": {
+      "backgroundType": "solid",
+      "color": "#1d68d7"
+    }
+  }
+}

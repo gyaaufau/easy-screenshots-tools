@@ -1,0 +1,1289 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "stopjudol-01",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#FEF9EB",
+        "gradientColor1": "#FEF9EB",
+        "gradientColor2": "#FEF9EB",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#FEF9EB",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Stop setor. Pegang kendali.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Satu keputusan kecil bisa jadi awal yang beda.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-01",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 0,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": -4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-01",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 9,
+          "color": "#3E7455",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-01",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": 12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-01",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": -18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-01",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": 18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-02",
+      "layout": "bottom",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#F6C15C",
+        "gradientColor1": "#F6C15C",
+        "gradientColor2": "#F6C15C",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#F6C15C",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Biar streak yang naik.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Hitung waktu bebas judol, lalu jalan terus.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-02",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 1,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 40,
+            "width": 58,
+            "scale": 1,
+            "rotation": 4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-02",
+          "kind": "circle",
+          "x": 50,
+          "y": 40,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 18,
+          "color": "#FEF9EB",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-02",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 70,
+          "width": 5,
+          "height": 2.3,
+          "rotation": -12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-02",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 15,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": 18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-02",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 72,
+          "width": 4,
+          "height": 1.85,
+          "rotation": -18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-03",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#FEF9EB",
+        "gradientColor1": "#FEF9EB",
+        "gradientColor2": "#FEF9EB",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#FEF9EB",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Mulai dengan akun anonim.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Di leaderboard, yang tampil adalah alias lu.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-03",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 2,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": -4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-03",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 9,
+          "color": "#3E7455",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-03",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": 12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-03",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": -18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-03",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": 18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-04",
+      "layout": "bottom",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#F6C15C",
+        "gradientColor1": "#F6C15C",
+        "gradientColor2": "#F6C15C",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#F6C15C",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Satu langkah. Mulai sekarang.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Saat siap, mulai streak pertama lu.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-04",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 3,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 40,
+            "width": 58,
+            "scale": 1,
+            "rotation": 4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-04",
+          "kind": "circle",
+          "x": 50,
+          "y": 40,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 18,
+          "color": "#FEF9EB",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-04",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 70,
+          "width": 5,
+          "height": 2.3,
+          "rotation": -12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-04",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 15,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": 18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-04",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 72,
+          "width": 4,
+          "height": 1.85,
+          "rotation": -18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-05",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#3E7455",
+        "gradientColor1": "#3E7455",
+        "gradientColor2": "#3E7455",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#3E7455",
+        "patternInkColor": "#FEF9EB",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Lihat progres lu setiap hari.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#FEF9EB",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Waktu bebas judol dan perkembangan rank dalam satu layar.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#FEF9EB",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-05",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 4,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": -4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-05",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 12,
+          "color": "#FEF9EB",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-05",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": 12,
+          "opacity": 100,
+          "color": "#F6C15C",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-05",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": -18,
+          "opacity": 70,
+          "color": "#F6C15C",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-05",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": 18,
+          "opacity": 85,
+          "color": "#F6C15C",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-06",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#FEF9EB",
+        "gradientColor1": "#FEF9EB",
+        "gradientColor2": "#FEF9EB",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#FEF9EB",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Ada teman seperjuangan.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Lihat streak aktif di Papan Para Sepuh.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-06",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 5,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": 4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-06",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 9,
+          "color": "#3E7455",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-06",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": -12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-06",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": 18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-06",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": -18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-07",
+      "layout": "bottom",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#F6C15C",
+        "gradientColor1": "#F6C15C",
+        "gradientColor2": "#F6C15C",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#F6C15C",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Kejar rekor terbaik lu.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Lihat pencapaian terlama di papan rekor.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-07",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 6,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 40,
+            "width": 58,
+            "scale": 1,
+            "rotation": -4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-07",
+          "kind": "circle",
+          "x": 50,
+          "y": 40,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 18,
+          "color": "#FEF9EB",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-07",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 70,
+          "width": 5,
+          "height": 2.3,
+          "rotation": 12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-07",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 15,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": -18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-07",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 72,
+          "width": 4,
+          "height": 1.85,
+          "rotation": 18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-08",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#FEF9EB",
+        "gradientColor1": "#FEF9EB",
+        "gradientColor2": "#FEF9EB",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#FEF9EB",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Pakai alias. Tetap jadi lu.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Pantau streak, rekor, dan jumlah mulai ulang.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-08",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 7,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": 4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-08",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 9,
+          "color": "#3E7455",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-08",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": -12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-08",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": 18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-08",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": -18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-09",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#FEF9EB",
+        "gradientColor1": "#FEF9EB",
+        "gradientColor2": "#FEF9EB",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#FEF9EB",
+        "patternInkColor": "#27332B",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Jatuh sekali bukan tamat.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Konfirmasi sebelum memulai streak dari awal.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#27332B",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-09",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 8,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": -4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-09",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 9,
+          "color": "#3E7455",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-09",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": 12,
+          "opacity": 100,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-09",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": -18,
+          "opacity": 70,
+          "color": "#3E7455",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-09",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": 18,
+          "opacity": 85,
+          "color": "#3E7455",
+          "layer": "front"
+        }
+      ]
+    },
+    {
+      "id": "stopjudol-10",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#3E7455",
+        "gradientColor1": "#3E7455",
+        "gradientColor2": "#3E7455",
+        "gradientAngle": 135,
+        "patternType": "dots",
+        "patternBaseColor": "#3E7455",
+        "patternInkColor": "#FEF9EB",
+        "patternScale": 12,
+        "patternOpacity": 8,
+        "imageIndex": null
+      },
+      "headline": {
+        "content": "Mulai lagi. Gas lagi, bre.",
+        "font": "Nunito",
+        "size": 120,
+        "style": {
+          "preset": "normal",
+          "color": "#FEF9EB",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Langkah berikutnya bisa dimulai hari ini.",
+        "font": "Nunito",
+        "size": 44,
+        "style": {
+          "preset": "normal",
+          "color": "#FEF9EB",
+          "accent": "#F6C15C"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "id": "phone-10",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 9,
+          "zoom": 100,
+          "imageFit": "contain",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "transform": {
+            "x": 50,
+            "y": 64,
+            "width": 62,
+            "scale": 1,
+            "rotation": 4
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#27332B",
+          "shadowOpacity": 22,
+          "shadowBlur": 6,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 2.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo-10",
+          "kind": "circle",
+          "x": 50,
+          "y": 58,
+          "width": 72,
+          "height": 33.218884,
+          "rotation": 0,
+          "opacity": 12,
+          "color": "#FEF9EB",
+          "layer": "back"
+        },
+        {
+          "id": "sparkle-10",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 26,
+          "width": 5,
+          "height": 2.3,
+          "rotation": -12,
+          "opacity": 100,
+          "color": "#F6C15C",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-small-10",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 33,
+          "width": 3.5,
+          "height": 1.6,
+          "rotation": 18,
+          "opacity": 70,
+          "color": "#F6C15C",
+          "layer": "front"
+        },
+        {
+          "id": "sparkle-accent-10",
+          "kind": "sparkle",
+          "x": 89,
+          "y": 88,
+          "width": 4,
+          "height": 1.85,
+          "rotation": -18,
+          "opacity": 85,
+          "color": "#F6C15C",
+          "layer": "front"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "01-onboarding-stop-setor.png"
+    },
+    {
+      "index": 1,
+      "name": "02-onboarding-streak.png"
+    },
+    {
+      "index": 2,
+      "name": "03-onboarding-privasi.png"
+    },
+    {
+      "index": 3,
+      "name": "04-onboarding-persetujuan.png"
+    },
+    {
+      "index": 4,
+      "name": "05-beranda-streak.png"
+    },
+    {
+      "index": 5,
+      "name": "06-leaderboard-streak-aktif.png"
+    },
+    {
+      "index": 6,
+      "name": "07-leaderboard-rekor.png"
+    },
+    {
+      "index": 7,
+      "name": "08-profil-pejuang.png"
+    },
+    {
+      "index": 8,
+      "name": "09-dialog-mulai-ulang.png"
+    },
+    {
+      "index": 9,
+      "name": "10-beranda-mulai-lagi.png"
+    }
+  ]
+}

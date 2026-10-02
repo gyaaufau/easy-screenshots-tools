@@ -74,3 +74,11 @@ test('served WebPs match their native screen metadata and lossless prepared pixe
     assert.deepEqual(JSON.parse(JSON.stringify(spec.screen)), prepared.screen);
   }
 });
+
+
+test('React metadata matches the generated compatibility frame catalog', async () => {
+  const context = { window: {} };
+  vm.runInNewContext(await readFile(new URL('../public/mockup/frames.js', import.meta.url), 'utf8'), context);
+  const metadata = JSON.parse(await readFile(new URL('../features/screenshot-editor/frame-specs.json', import.meta.url), 'utf8'));
+  assert.deepEqual(metadata, JSON.parse(JSON.stringify(context.window.mockupFrameSpecs)));
+});

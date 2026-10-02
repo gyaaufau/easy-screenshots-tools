@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "little-wins",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#251b33"
+      },
+      "headline": {
+        "content": "Little wins.\nLovely rewards.",
+        "font": "Plus Jakarta Sans",
+        "size": 128,
+        "style": {
+          "preset": "normal",
+          "color": "#fff4df",
+          "accent": "#c8a3ef"
+        },
+        "y": -1
+      },
+      "subheadline": {
+        "content": "Lumi / Make room for your favorite things.",
+        "font": "Plus Jakarta Sans",
+        "size": 36,
+        "style": {
+          "preset": "normal",
+          "color": "#fff4df",
+          "accent": "#c8a3ef"
+        },
+        "y": -1
+      },
+      "frames": [
+        {
+          "id": "phone",
+          "kind": "iphone-14-dark",
+          "imageIndex": 0,
+          "imageFit": "contain",
+          "transform": {
+            "x": 50,
+            "y": 63,
+            "width": 65,
+            "scale": 1,
+            "rotation": 0
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#170e22",
+          "shadowOpacity": 12,
+          "shadowBlur": 3,
+          "shadowOffsetY": 0.8,
+          "shadowOffsetX": 0
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "seam-blob",
+          "kind": "blob",
+          "x": 100,
+          "y": 76,
+          "width": 104,
+          "height": 48,
+          "rotation": 0,
+          "color": "#30233f",
+          "opacity": 100,
+          "layer": "back"
+        },
+        {
+          "id": "little-star",
+          "kind": "star",
+          "x": 9,
+          "y": 47,
+          "width": 4.5,
+          "height": 2.0762,
+          "color": "#ffe18b",
+          "layer": "front",
+          "rotation": 0,
+          "opacity": 100
+        },
+        {
+          "id": "tiny-star",
+          "kind": "star",
+          "x": 91,
+          "y": 80,
+          "width": 3,
+          "height": 1.3841,
+          "color": "#ffe18b",
+          "layer": "front",
+          "rotation": 0,
+          "opacity": 100
+        },
+        {
+          "id": "reward-heart",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-heart",
+          "x": 89,
+          "y": 36,
+          "width": 8,
+          "height": 3.69,
+          "color": "#c8a3ef",
+          "rotation": 8,
+          "opacity": 100,
+          "layer": "front",
+          "lockAspect": true
+        },
+        {
+          "id": "reward-sparkles",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-sparkles",
+          "x": 10,
+          "y": 88,
+          "width": 8,
+          "height": 3.69,
+          "color": "#ffe18b",
+          "rotation": 0,
+          "opacity": 100,
+          "layer": "front",
+          "lockAspect": true
+        }
+      ]
+    },
+    {
+      "id": "little-friend",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#fff4df"
+      },
+      "headline": {
+        "content": "A little friend.\nFor your mind.",
+        "font": "Plus Jakarta Sans",
+        "size": 128,
+        "style": {
+          "preset": "normal",
+          "color": "#34223f",
+          "accent": "#c8a3ef"
+        },
+        "y": -1
+      },
+      "subheadline": {
+        "content": "Lumi / A softer place to start.",
+        "font": "Plus Jakarta Sans",
+        "size": 36,
+        "style": {
+          "preset": "normal",
+          "color": "#34223f",
+          "accent": "#c8a3ef"
+        },
+        "y": -1
+      },
+      "frames": [
+        {
+          "id": "phone",
+          "kind": "iphone-14-dark",
+          "imageIndex": 1,
+          "imageFit": "contain",
+          "transform": {
+            "x": 50,
+            "y": 63,
+            "width": 65,
+            "scale": 1,
+            "rotation": 0
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#170e22",
+          "shadowOpacity": 12,
+          "shadowBlur": 3,
+          "shadowOffsetY": 0.8,
+          "shadowOffsetX": 0
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "seam-blob",
+          "kind": "blob",
+          "x": 0,
+          "y": 76,
+          "width": 104,
+          "height": 48,
+          "rotation": 0,
+          "color": "#f1e6db",
+          "opacity": 100,
+          "layer": "back"
+        },
+        {
+          "id": "little-heart",
+          "kind": "sticker",
+          "x": 9,
+          "y": 47,
+          "width": 7,
+          "height": 3.2296,
+          "color": "#f296b5",
+          "layer": "front",
+          "rotation": 0,
+          "opacity": 100,
+          "source": "catalog",
+          "stickerId": "doodle-heart",
+          "lockAspect": true
+        },
+        {
+          "id": "tiny-sparkle",
+          "kind": "sparkle",
+          "x": 91,
+          "y": 80,
+          "width": 3.5,
+          "height": 1.6148,
+          "color": "#b48bdf",
+          "layer": "front",
+          "rotation": 0,
+          "opacity": 100
+        },
+        {
+          "id": "friend-flower",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-flower",
+          "x": 88,
+          "y": 36,
+          "width": 8,
+          "height": 3.69,
+          "color": "#c8a3ef",
+          "rotation": 0,
+          "opacity": 100,
+          "layer": "front",
+          "lockAspect": true
+        },
+        {
+          "id": "friend-star",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-star",
+          "x": 10,
+          "y": 88,
+          "width": 8,
+          "height": 3.69,
+          "color": "#e5adba",
+          "rotation": -8,
+          "opacity": 100,
+          "layer": "front",
+          "lockAspect": true
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "reward shop.png"
+    },
+    {
+      "index": 1,
+      "name": "Cognitive Bias Validation.png"
+    }
+  ]
+}

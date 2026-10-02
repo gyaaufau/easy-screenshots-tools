@@ -1,0 +1,341 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "your-story",
+      "layout": "top",
+      "background": {
+        "backgroundType": "gradient",
+        "gradientColor1": "#170c17",
+        "gradientColor2": "#681537",
+        "gradientAngle": 145
+      },
+      "headline": {
+        "content": "Your choices. Your story.",
+        "font": "DM Serif Display",
+        "size": 164,
+        "style": {
+          "preset": "normal",
+          "color": "#fff1f6",
+          "accent": "#ffa4c4"
+        }
+      },
+      "subheadline": {
+        "content": "Live the drama. Own every decision.",
+        "font": "Plus Jakarta Sans",
+        "size": 36,
+        "style": {
+          "preset": "normal",
+          "color": "#edbbce",
+          "accent": "#ffa4c4"
+        }
+      },
+      "frames": [
+        {
+          "id": "hero",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 0,
+          "imageFit": "cover",
+          "transform": {
+            "x": 49,
+            "y": 62,
+            "width": 62,
+            "scale": 1,
+            "rotation": -6
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#000000",
+          "shadowOpacity": 32,
+          "shadowBlur": 7,
+          "shadowOffsetY": 3.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo",
+          "kind": "circle",
+          "x": 88,
+          "y": 69,
+          "width": 150,
+          "height": 69.2,
+          "color": "#b32e62",
+          "opacity": 16,
+          "layer": "back",
+          "rotation": 0
+        },
+        {
+          "id": "spark",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 36,
+          "width": 5,
+          "height": 2.3,
+          "color": "#ffadc9",
+          "opacity": 90,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "little-star",
+          "kind": "sparkle",
+          "x": 12,
+          "y": 82,
+          "width": 3,
+          "height": 1.38,
+          "color": "#ffa4c4",
+          "opacity": 65,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "rule",
+          "kind": "line",
+          "x": 50,
+          "y": 29,
+          "width": 20,
+          "height": 0.12,
+          "color": "#eda8c1",
+          "opacity": 40,
+          "layer": "back",
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "little-drama",
+      "layout": "top",
+      "background": {
+        "backgroundType": "gradient",
+        "gradientColor1": "#a10b43",
+        "gradientColor2": "#f46795",
+        "gradientAngle": 145
+      },
+      "headline": {
+        "content": "A little drama. A lot of you.",
+        "font": "DM Serif Display",
+        "size": 156,
+        "style": {
+          "preset": "gradient",
+          "color": "#fff4f8",
+          "accent": "#ffd0e2"
+        }
+      },
+      "subheadline": {
+        "content": "Choose your next move. Change what happens.",
+        "font": "Plus Jakarta Sans",
+        "size": 36,
+        "style": {
+          "preset": "normal",
+          "color": "#ffe3ee",
+          "accent": "#ffa4c4"
+        }
+      },
+      "frames": [
+        {
+          "id": "right",
+          "kind": "iphone-14-dark",
+          "imageIndex": 0,
+          "imageFit": "cover",
+          "transform": {
+            "x": 73,
+            "y": 61,
+            "width": 45,
+            "scale": 1,
+            "rotation": 12
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#000000",
+          "shadowOpacity": 32,
+          "shadowBlur": 7,
+          "shadowOffsetY": 3.5
+        },
+        {
+          "id": "left",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 0,
+          "imageFit": "cover",
+          "transform": {
+            "x": 28,
+            "y": 65,
+            "width": 47,
+            "scale": 1,
+            "rotation": -12
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#000000",
+          "shadowOpacity": 32,
+          "shadowBlur": 7,
+          "shadowOffsetY": 3.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "slab",
+          "kind": "rectangle",
+          "x": 50,
+          "y": 69,
+          "width": 132,
+          "height": 40,
+          "color": "#ffd3e3",
+          "opacity": 14,
+          "layer": "back",
+          "rotation": -18
+        },
+        {
+          "id": "spark",
+          "kind": "sparkle",
+          "x": 88,
+          "y": 33,
+          "width": 6,
+          "height": 2.77,
+          "color": "#fff1f6",
+          "opacity": 90,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "dot",
+          "kind": "circle",
+          "x": 11,
+          "y": 36,
+          "width": 1.6,
+          "height": 0.738,
+          "color": "#fff1f6",
+          "opacity": 85,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "rule",
+          "kind": "line",
+          "x": 50,
+          "y": 31,
+          "width": 24,
+          "height": 0.12,
+          "color": "#ffffff",
+          "opacity": 35,
+          "layer": "back",
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "another-life",
+      "layout": "top",
+      "background": {
+        "backgroundType": "solid",
+        "color": "#fff3ed"
+      },
+      "headline": {
+        "content": "Step into another life.",
+        "font": "DM Serif Display",
+        "size": 158,
+        "style": {
+          "preset": "normal",
+          "color": "#48132c",
+          "accent": "#ffa4c4"
+        }
+      },
+      "subheadline": {
+        "content": "Stories worth staying up for.",
+        "font": "Plus Jakarta Sans",
+        "size": 36,
+        "style": {
+          "preset": "normal",
+          "color": "#845068",
+          "accent": "#ffa4c4"
+        }
+      },
+      "frames": [
+        {
+          "id": "hero",
+          "kind": "iphone-14-pro-dark",
+          "imageIndex": 0,
+          "imageFit": "cover",
+          "transform": {
+            "x": 51,
+            "y": 62,
+            "width": 62,
+            "scale": 1,
+            "rotation": 6
+          },
+          "shadowEnabled": true,
+          "shadowColor": "#782847",
+          "shadowOpacity": 32,
+          "shadowBlur": 7,
+          "shadowOffsetY": 3.5
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "petal",
+          "kind": "blob",
+          "x": 91,
+          "y": 74,
+          "width": 165,
+          "height": 76,
+          "color": "#e5b1c9",
+          "opacity": 100,
+          "layer": "back",
+          "rotation": -15
+        },
+        {
+          "id": "halo",
+          "kind": "circle",
+          "x": 25,
+          "y": 80,
+          "width": 115,
+          "height": 53.05,
+          "color": "#f3d6df",
+          "opacity": 100,
+          "layer": "back",
+          "rotation": 0
+        },
+        {
+          "id": "spark",
+          "kind": "sparkle",
+          "x": 15,
+          "y": 38,
+          "width": 5,
+          "height": 2.3,
+          "color": "#9d325c",
+          "opacity": 80,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "mini",
+          "kind": "sparkle",
+          "x": 85,
+          "y": 85,
+          "width": 3,
+          "height": 1.38,
+          "color": "#9d325c",
+          "opacity": 65,
+          "layer": "front",
+          "rotation": 0
+        },
+        {
+          "id": "rule",
+          "kind": "line",
+          "x": 50,
+          "y": 27,
+          "width": 20,
+          "height": 0.12,
+          "color": "#a76881",
+          "opacity": 35,
+          "layer": "back",
+          "rotation": 0
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "paywall-iphone.png"
+    }
+  ]
+}

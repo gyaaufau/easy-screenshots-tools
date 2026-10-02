@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "home",
+      "headline": {
+        "content": "A little joy. A lot of you.",
+        "font": "DM Serif Display",
+        "size": 150
+      },
+      "background": {
+        "backgroundType": "gradient",
+        "gradientColor1": "#301631",
+        "gradientColor2": "#b52d62",
+        "gradientAngle": 145
+      },
+      "frames": [
+        {
+          "id": "phone",
+          "imageIndex": 0,
+          "transform": {
+            "x": 50,
+            "y": 62,
+            "width": 58,
+            "scale": 1,
+            "rotation": -6
+          }
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo",
+          "kind": "circle",
+          "x": 85,
+          "y": 65,
+          "width": 95,
+          "height": 44,
+          "color": "#ff78aa",
+          "opacity": 20,
+          "layer": "back"
+        },
+        {
+          "id": "wow",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "label-wow",
+          "text": "LOVE IT",
+          "color": "#ff78aa",
+          "x": 80,
+          "y": 35,
+          "rotation": -12
+        },
+        {
+          "id": "smile",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "emoji-smile",
+          "x": 15,
+          "y": 80,
+          "width": 15,
+          "rotation": 15
+        },
+        {
+          "id": "uploaded",
+          "kind": "sticker",
+          "source": "upload",
+          "imageIndex": 1,
+          "x": 17,
+          "y": 35,
+          "width": 18
+        }
+      ],
+      "subheadline": {
+        "content": "Pick your mood. Make it yours."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "screenshot.png"
+    },
+    {
+      "index": 1,
+      "name": "sticker.png"
+    }
+  ]
+}

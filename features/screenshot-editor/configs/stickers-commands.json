@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "kind": "commands",
+  "commands": [
+    {
+      "op": "sticker.duplicate",
+      "slide": "home",
+      "sticker": "wow",
+      "id": "wow-copy"
+    },
+    {
+      "op": "sticker.update",
+      "slide": "home",
+      "sticker": "wow-copy",
+      "value": {
+        "x": 30,
+        "y": 30,
+        "rotation": 12,
+        "text": "NEW!"
+      }
+    },
+    {
+      "op": "sticker.reorder",
+      "slide": "home",
+      "sticker": "wow-copy",
+      "direction": "forward"
+    },
+    {
+      "op": "sticker.select",
+      "slide": "home",
+      "sticker": "wow-copy"
+    }
+  ]
+}

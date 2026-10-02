@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "complete",
+      "layout": "top",
+      "background": {
+        "backgroundType": "pattern",
+        "color": "#ef5d42",
+        "gradientColor1": "#ef5d42",
+        "gradientColor2": "#f5b93f",
+        "gradientAngle": 135,
+        "patternType": "upload",
+        "patternBaseColor": "#ef5d42",
+        "patternInkColor": "#ffffff",
+        "patternScale": 10,
+        "patternOpacity": 24,
+        "imageIndex": 0
+      },
+      "headline": {
+        "content": "Lorem ipsum dolor sit amet",
+        "font": "Archivo",
+        "size": 110,
+        "style": {
+          "preset": "gradient",
+          "color": null,
+          "accent": "#f5b93f"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "subheadline": {
+        "content": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "font": "IBM Plex Sans",
+        "size": 40,
+        "style": {
+          "preset": "normal",
+          "color": null,
+          "accent": "#f5b93f"
+        },
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation": 0
+      },
+      "frames": [
+        {
+          "kind": "iphone-14-pro-dark",
+          "zoom": 100,
+          "imageFit": "cover",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "shadowEnabled": true,
+          "shadowColor": "#000000",
+          "shadowOpacity": 32,
+          "shadowBlur": 8,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 3.5,
+          "id": "frame-1",
+          "imageIndex": 0,
+          "transform": {
+            "x": 50,
+            "y": 50,
+            "width": 61.91340782122905,
+            "scale": 1,
+            "rotation": 0
+          }
+        },
+        {
+          "kind": "iphone-14-pro-dark",
+          "zoom": 100,
+          "imageFit": "cover",
+          "screenPanX": 0,
+          "screenPanY": 0,
+          "imageOffsetXPct": null,
+          "imageOffsetYPct": null,
+          "imageWidthPct": null,
+          "imageHeightPct": null,
+          "imageRotation": 0,
+          "shadowEnabled": true,
+          "shadowColor": "#000000",
+          "shadowOpacity": 32,
+          "shadowBlur": 8,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 3.5,
+          "id": "frame-2",
+          "imageIndex": 0,
+          "transform": {
+            "x": 50,
+            "y": 50,
+            "width": 61.91340782122905,
+            "scale": 1,
+            "rotation": 0
+          }
+        }
+      ],
+      "ornaments": [
+        {
+          "kind": "sparkle",
+          "x": 50,
+          "y": 50,
+          "width": 20,
+          "height": 9.227467811158798,
+          "rotation": 0,
+          "color": "#e84f2f",
+          "opacity": 100,
+          "layer": "front",
+          "id": "ornament-1"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "screenshot.png"
+    }
+  ]
+}

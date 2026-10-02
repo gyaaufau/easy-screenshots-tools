@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "kind": "project",
+  "preset": "app67",
+  "slides": [
+    {
+      "id": "home",
+      "headline": {
+        "content": "Small moments. Big energy.",
+        "font": "DM Serif Display",
+        "size": 150
+      },
+      "background": {
+        "backgroundType": "gradient",
+        "gradientColor1": "#301631",
+        "gradientColor2": "#b52d62",
+        "gradientAngle": 145
+      },
+      "frames": [
+        {
+          "id": "phone",
+          "imageIndex": 0,
+          "transform": {
+            "x": 50,
+            "y": 62,
+            "width": 58,
+            "scale": 1,
+            "rotation": -6
+          }
+        }
+      ],
+      "ornaments": [
+        {
+          "id": "halo",
+          "kind": "circle",
+          "x": 85,
+          "y": 65,
+          "width": 95,
+          "height": 44,
+          "color": "#ff78aa",
+          "opacity": 20,
+          "layer": "back"
+        },
+        {
+          "id": "yay",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "label-yay",
+          "text": "YAY!",
+          "color": "#ff78aa",
+          "x": 79,
+          "y": 35,
+          "width": 23,
+          "rotation": 12
+        },
+        {
+          "id": "rocket",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "emoji-rocket",
+          "x": 17,
+          "y": 81,
+          "width": 17,
+          "rotation": -18
+        },
+        {
+          "id": "sparkles",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-sparkles",
+          "color": "#9bda8c",
+          "x": 17,
+          "y": 34,
+          "width": 18,
+          "rotation": -8
+        },
+        {
+          "id": "wave",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "doodle-underline-wave",
+          "color": "#6ebfee",
+          "x": 53,
+          "y": 91,
+          "width": 40,
+          "rotation": 4
+        },
+        {
+          "id": "hello",
+          "kind": "sticker",
+          "source": "catalog",
+          "stickerId": "label-hello",
+          "text": "HELLO!",
+          "color": "#a898ef",
+          "x": 84,
+          "y": 83,
+          "width": 20,
+          "rotation": 9
+        }
+      ],
+      "subheadline": {
+        "content": "Make every screenshot feel like you."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "index": 0,
+      "name": "screenshot.png"
+    }
+  ]
+}
